@@ -60,7 +60,7 @@ jobs:
               "color": 12912,
               "fields": [
                 {
-                  "name": "Docs Version:",
+                  "name": "Documentation Version:",
                   "value": "V" + "$GITHUB_RUN_NUMBER",
                 },
                 {
