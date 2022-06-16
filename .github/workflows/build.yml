@@ -16,9 +16,9 @@ jobs:
         python-version: [3.9]
     
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v3
     - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v1
+      uses: actions/setup-python@v3
       with:
         python-version: ${{ matrix.python-version }}
 
@@ -54,9 +54,7 @@ jobs:
         import json
         import time
         Data = {
-          "username": "Deployed The Site",
-          #"avatar_url": "https://i.imgur.com/4M34hi2.png",
-          #"content": "",
+          "username": "EPD Documentation Update",
           "embeds": [
             {
               "title": "EPD Docs Was Deployed",
