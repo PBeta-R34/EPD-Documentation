@@ -55,7 +55,7 @@ jobs:
           "embeds": [
             {
               "title": "EPD Docs Was Deployed",
-              "url": "https://PBeta-R34.github.io/EPD-Docs/",
+              "url": "https://pbeta-r34.github.io/EPD-Documentation/",
               "description": "Docs Site Deployed At " + time.strftime("%a, %d %b %Y %H:%M:%S", time.gmtime()),
               "color": 12912,
               "fields": [
