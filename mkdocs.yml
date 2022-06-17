@@ -39,8 +39,13 @@ nav:
         - "License": "EPDLicense.md"
         - "Release Notes": "release-notes.md"
 
-    #- Preprocessor:
-    #    - 
+    - Script-Hub:
+      - Utilities:
+        - EPD Explorer:
+          - Luau-Match-Search: "HUB/Explorer/LuauMatchSearch.md"
+          - RBX-Docs-WebScrapper: "HUB/Explorer/WebScrapper.md"
+
+
     - API:
       - EPD Enums/Info:
         - Useful CPU Features: "API/Enums/Hardware.md"

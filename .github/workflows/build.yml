@@ -42,41 +42,11 @@ jobs:
         publish_dir: ./site
         publish_branch: BuiltSite
 
-
-
     - name: Send Webhook
+      env:
+        DiscordWebhookToken: ${{ secrets.DISCORD_DOCS_DEPLOYED_WEBHOOK }}
+        CommitMessage: ${{ github.event.commits[0].message }}
       run: |
-        cat <<EOT >> WebhookSend.py
-        import requests
-        import json
-        import time
-        Data = {
-          "username": "EPD Documentation Update",
-          "embeds": [
-            {
-              "title": "EPD Docs Was Deployed",
-              "url": "https://pbeta-r34.github.io/EPD-Documentation/",
-              "description": "Docs Site Deployed At " + time.strftime("%a, %d %b %Y %H:%M:%S", time.gmtime()),
-              "color": 12912,
-              "fields": [
-                {
-                  "name": "Documentation Version:",
-                  "value": "V" + "$GITHUB_RUN_NUMBER",
-                },
-                {
-                  "name": "Commit Reason:",
-                  "value": "${{ github.event.commits[0].message }}",
-                },
-              ],
-
-            }
-          ]
-        }
-        Result = requests.post("${{ secrets.DISCORD_DOCS_DEPLOYED_WEBHOOK }}",headers={"Content-Type":"application/json"},data=json.dumps(Data))
-        print(Result.content)
-        exit(0)
-        EOT
         python WebhookSend.py
-        rm WebhookSend.py
 
 
