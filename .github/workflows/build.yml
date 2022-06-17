@@ -47,6 +47,6 @@ jobs:
         DiscordWebhookToken: ${{ secrets.DISCORD_DOCS_DEPLOYED_WEBHOOK }}
         CommitMessage: ${{ github.event.commits[0].message }}
       run: |
-        python WebhookSend.py
+        python .github/workflows/WebhookSend.py
 
 
