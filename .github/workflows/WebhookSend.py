@@ -7,6 +7,7 @@ def main():
   if environ.get("GITHUB_ENV", None):
     Data = {
       "username": "EPD Documentation Update",
+      "content": environ.get("PingTag"),
       "embeds": [
         {
           "title": "EPD Docs Was Deployed",
