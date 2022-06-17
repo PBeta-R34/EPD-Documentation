@@ -17,7 +17,7 @@ def main():
           "fields": [
             {
               "name": "Documentation Version:",
-              "value": "V" + str(environ.get("RunNumber", None)),
+              "value": "V" + str(environ.get("GITHUB_RUN_NUMBER")),
             },
             {
               "name": "Commit Reason:",
