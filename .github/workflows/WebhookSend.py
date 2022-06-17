@@ -13,7 +13,7 @@ def main():
           "title": "EPD Docs Was Deployed",
           "url": "https://pbeta-r34.github.io/EPD-Documentation/",
           "description": "Docs Site Deployed At " + time.strftime("%a, %d %b %Y %H:%M:%S", time.gmtime()),
-          "color": 12912,
+          "color": 0x252ACC,
           "fields": [
             {
               "name": "Documentation Version:",
